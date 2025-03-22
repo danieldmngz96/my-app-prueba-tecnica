@@ -217,7 +217,8 @@ export default function TiposPage() {
           <DialogTitle>Eliminar Tipo</DialogTitle>
           <DialogContent>
             <Typography>
-              ¿Estás seguro de que deseas eliminar "{currentTipo?.nombre}"?
+              ¿Estás seguro de que deseas eliminar &quot;{currentTipo?.nombre}
+              &quot;?
             </Typography>
           </DialogContent>
           <DialogActions>
