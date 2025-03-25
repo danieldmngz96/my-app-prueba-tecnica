@@ -16,6 +16,7 @@ import {
   Box,
 } from "@mui/material";
 import Swal from "sweetalert2";
+import Nav from "../../components/Navbar"; 
 
 interface Propiedad {
   id: string;
@@ -43,7 +44,7 @@ export default function TiposPage() {
       .then((res) => res.json())
       .then((data: Propiedad[]) => setPropiedades(data));
 
-    fetch("/api/tipos")
+    fetch("/api/api/all")
       .then((res) => res.json())
       .then((data: Tipo[]) => setTipos(data));
   }, []);
@@ -95,6 +96,7 @@ export default function TiposPage() {
 
   return (
     <Box sx={{ bgcolor: "white", minHeight: "100vh", p: 3 }}>
+      <Nav />
       <Container>
         <Typography variant="h4" gutterBottom sx={{ color: "black" }}>
           Gestión de Tipos
